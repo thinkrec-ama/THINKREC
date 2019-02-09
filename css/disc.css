@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* * * * * * * * * * * * * * * * * * *
+ * disc STYLES
+ * * * * * * * * * * * * * * * * * * */
+
+.disc-info-header {
+	padding: 5px 0 3px;
+	border-bottom: 1px dotted #333;
+}
+
+.disc-title {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.release-date {
+	display: block;
+	float: right;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 22px;
+}
+
+.title-txt {
+	display: block;
+	overflow: hidden;
+}
+
+.disc-info-wrap {
+	margin-top: 10px;
+}
+
+.author {
+	margin-top: 10px;
+	text-align: right;
+	font-size: 10px;
+}
+
+.ft-disc-date-wrap {
+	margin-top: 10px;
+}
+
+.disc-date {
+	padding: 3px 5px;
+	-webkit-border-radius: 3px;
+	        border-radius: 3px;
+	background: #ecf0f1;
+}
+
+.disc-date > dt,
+.disc-date > dd {
+	float: left;
+	font-size: 10px;
+}
+
+.disc-date > dt {
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+.disc-date > dd {
+	margin-right: 10px;
+}
+
+.track-list > li {
+	margin-right: 10px;
+	font-size: 10px;
+}

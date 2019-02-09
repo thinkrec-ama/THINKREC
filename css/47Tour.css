@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* * * * * * * * * * * * * * * * * * *
+ * 47 Tour
+ * * * * * * * * * * * * * * * * * * */
+
+#jp-map {
+	margin: 0 auto;
+	width: 800px;
+}
+
+.map-wrap {
+	margin: 30px 0;
+}
+
+/* リリース・リスト上書き */
+.release-list > li {
+	float: none;
+	margin: 0 auto;
+	width: 120px;
+}

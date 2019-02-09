@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+/* * * * * * * * * * * * * * * * * * *
+ * RESET
+ * * * * * * * * * * * * * * * * * * */
+
+body, div, p,  ul, ol, li, dl, dt, dd, h1, h2, h3 ,h4 ,h5, h6,
+table, th ,td, img, form, figure {
+	margin: 0;
+	padding: 0;
+}
+ul, ol	{ list-style: none; }
+img		{ border: 0; vertical-align: bottom; }
+
+/* * * * * * * * * * * * * * * * * * *
+ * INITIAL STYLES
+ * * * * * * * * * * * * * * * * * * */
+
+table	{ border-collapse: collapse; }
+th		{ vertical-align: top; text-align: left; font-weight: normal; }
+input,
+select	{ vertical-align: middle; }
+
+/* define block for html5 new tags */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ * FONT STYLES
+ * * * * * * * * * * * * * * * * * * */
+
+body {
+	color: #4C4950;
+	background: #ecf0f1;
+	font-size: 13px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%;
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ * ANCHOR STYLES
+ * * * * * * * * * * * * * * * * * * */
+
+a:link,
+a:visited { color: #140f10; text-decoration: none; }
+a:hover,
+a:active,
+a.current { color: #140f10; text-decoration: none; }
+
+/* * * * * * * * * * * * * * * * * * *
+ * SP
+ * * * * * * * * * * * * * * * * * * */
+
+@media screen and (max-width:1000px) {
+	img {
+		max-width: 100%;
+		height: auto;
+		width : auto;
+	}
+	/* --- HEADER --- */
+	.headerWrap {
+		padding: 10px;
+		background: #4C4950;
+		color: #FFFFFF;
+	}
+	.bgLogoWrap {
+		display: none;
+	}
+	.eventDate {
+		font-size: 18px;
+		text-align: center;
+		line-height: 1;
+		font-weight: bold;
+	}
+	.presentsTxt {
+		text-align: center;
+		line-height: 1.3;
+	}
+	.eventHeadline {
+		font-weight: bold;
+		font-size: 20px;
+		text-align: center;
+		line-height: 1.3;
+	}
+	.eventCharge {
+		text-align: center;
+	}
+	/* --- CONTENT --- */
+	.content {
+		padding: 10px;
+	}
+	.actListWrap > dt {
+		font-weight: normal;
+		font-size: 13px;
+		background: #1abc9c;
+		display: inline-block;
+		color: #FFFFFF;
+		padding: 3px 5px;
+		line-height: 1;
+	}
+	.actListWrap > dd {
+		margin-top: 5px;
+	}
+	.actListWrap ~ .actListWrap {
+		margin-top: 20px;
+	}
+	.actDetail > dt {
+		font-weight: bold;
+		font-size: 18px;
+		margin-top: -1px;
+		padding: 10px 0 0;
+		border-bottom: 1px dotted #333333;
+		cursor: pointer;
+	}
+	.actDetail > dd {
+		display: none;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	.actDetail .andMore {
+		font-size: 13px;
+		text-align: right;
+		border-bottom: none;
+	}
+	.affiliation {
+		font-weight: normal;
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	.actImage {
+		padding: 3px;
+		border: 1px solid #CCCCCC;
+		background: #FFFFFF;
+		display: inline-block;
+	}
+	.profile {
+		margin-top: 5px;
+		text-align: left;
+		font-family: 'メイリオ',Meiryo,'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',MS PGothic,sans-serif;
+	}
+	.photoText {
+		font-size: 12px;
+		margin-right: 5px;
+	}
+	.backyardHeadline {
+		margin: 10px 0 10px;
+		padding: 10px 0 10px;
+		background: #DBE1E5;
+	}
+	/* Scroll Top */
+	.jscScrollTopWrap {
+		position: fixed;
+		display: none;
+		right: 30px;
+		bottom: 20px;
+		width: 50px;
+		height: 50px;
+	}
+	.jscScrollTopWrap > p {
+		text-align: center;
+		background: #3D3D3D;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.jscScrollTopWrap > p:hover {
+		background: #8B8B8B;
+	}
+	.jscScrollTop {
+		color: #FFFFFF;
+		line-height: 50px;
+		text-decoration: none;
+		display: block;
+		cursor: pointer;
+	}
+	/* --- FOOTER --- */
+	.footerWrap {
+		border-top: 1px dotted #333333;
+		margin-top: 30px;
+		padding: 10px 10px 20px;
+	}
+	.shopInfo {
+		display: table;
+		width: 100%;
+	}
+	.shopInfo > li {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.shopInfo > li + li {
+		padding-left: 10px;
+	}
+	.shopDtail {
+		display: table;
+	}
+	.shopDtail > dt {
+		width: 30px;
+		padding-right: 10px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.shopDtail > dd {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.shopDtail > dt img {
+		width: 30px;
+		height: 30px;
+	}
+	.ticketInfo > dt {
+		font-weight: bold;
+	}
+	.thinkrecInfo {
+		background: #bdc3c7;
+		margin-top: -10px;
+		padding: 20px 10px;
+		text-align: center;
+	}
+	.thinkrecInfo img {
+		width: 100px;
+		height: 10px;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ * PC
+ * * * * * * * * * * * * * * * * * * */
+
+@media print, screen and (min-width:1001px) {
+	.wrap {
+		padding: 20px 0 0;
+		border-top: 5px solid #4C4950;
+	}
+	/* --- HEADER --- */
+	.headerWrap {
+		position: relative;
+		padding: 0 20px;
+	}
+	.eventHeadline {
+		width: 750px;
+		background: #bdc3c7;
+		padding: 7px 5px;
+		margin-top: 5px;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 1;
+	}
+	.eventDate {
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 1;
+	}
+	.presentsTxt {
+		margin-top: 10px;
+		font-size: 15px;
+		line-height: 1;
+	}
+	.eventCharge {
+		font-weight: bold;
+		font-size: 15px;
+	}
+	.bgLogoWrap {
+		position: absolute;
+		top: 5px;
+		right: 30px;
+	}
+	.bgLogoWrap img {
+		width: 120px;
+		height: 120px;
+	}
+	/* --- CONTENT --- */
+	.content {
+		width: 980px;
+		margin: 30px auto 0;
+	}
+	.actListWrap ~ .actListWrap {
+		margin-top: 20px;
+	}
+	.actListWrap > dt {
+		font-weight: bold;
+		font-size: 15px;
+	}
+	.actListWrap > dd {
+		margin-top: 10px;
+	}
+	.actDetail > dt {
+		font-size: 60px;
+		padding: 0 10px;
+		line-height: 1;
+		cursor: pointer;
+		font-family: 'Montserrat', sans-serif;
+	}
+	.actDetail > dt:hover {
+		color: #FFFFFF;
+		background: #bdc3c7;
+	}
+	.actDetail > dt ~ dt {
+		margin-top: 10px;
+	}
+	.actDetail > dd {
+		margin-top: 10px;
+		padding: 0 10px 10px;
+		display: none;
+		border-bottom: 1px dotted #333333;
+	}
+	.actImage {
+		width: 307px;
+		background: #FFFFFF;
+		text-align: center;
+		padding: 3px;
+		border: 1px solid #CCCCCC;
+	}
+	.affiliation {
+		margin-left: 10px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.actImage {
+		float: left;
+		margin-right: 20px;
+	}
+	.profile {
+		overflow: hidden;
+		font-size: 13px;
+	}
+	.actLink {
+		margin-top: 10px;
+		font-weight: bold;
+	}
+	.actLink:hover {
+		color: #FFFFFF;
+		background: #e74c3c;
+	}
+	.backyardHeadline {
+		margin-top: 50px;
+		padding: 0 20px;
+	}
+	.photoText {
+		font-weight: bold;
+		font-size: 25px;
+		margin-right: 5px;
+	}
+	.actDetail .andMore {
+		font-size: 25px;
+		text-align: right;
+	}
+	/* --- FOOTER --- */
+	.footerWrap {
+		margin-top: 100px;
+		color: #000000;
+		border-top: 1px dotted #333333;
+		padding: 20px 10px;
+		text-align: center;
+	}
+	.shopInfo {
+		display: table;
+		width: 630px;
+		margin: 0 auto;
+	}
+	.shopInfo > li {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+	}
+	.shopInfo > li + li {
+		padding-left: 100px;
+	}
+	.shopDtail {
+		display: table;
+	}
+	.shopDtail > dt {
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 20px;
+	}
+	.shopDtail > dd {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.shopDtail > dt > img {
+		width: 35px;
+		height: 35px;
+	}
+	.ticketInfo > dt {
+		font-weight: bold;
+	}
+	.ticketInfo > dd a,
+	.shopDtail a {
+		display: block;
+	}
+	.ticketInfo > dd a:hover,
+	.shopDtail a:hover {
+		background: #c0392b;
+		color: #FFFFFF;
+	}
+	/* Scroll Top */
+	.jscScrollTopWrap {
+		position: fixed;
+		display: none;
+		right: 30px;
+		bottom: 30px;
+		width: 50px;
+		height: 50px;
+	}
+	.jscScrollTopWrap > p {
+		text-align: center;
+		background: #3D3D3D;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.jscScrollTopWrap > p:hover {
+		background: #8B8B8B;
+	}
+	.jscScrollTop {
+		color: #FFFFFF;
+		line-height: 50px;
+		text-decoration: none;
+		display: block;
+		cursor: pointer;
+	}
+	.photoWrap {
+		margin-top: 50px;
+		font-size: 0;
+		text-align: center;
+	}
+	.photoList > li {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.photoList img:hover {
+		opacity: 0.7;
+	}
+	.photoList > li > a > img[src$="loading_30_30.gif"] {
+		width: 30px;
+		height: 30px;
+	}
+	.thinkrecInfo {
+		margin-top: -10px;
+		padding: 20px 10px;
+		text-align: center;
+		background: #bdc3c7;
+	}
+	.thinkrecInfo > a {
+		display: inline-block;
+	}
+	.thinkrecInfo > a:hover {
+		opacity: 0.7;
+	}
+	.thinkrecInfo img {
+		width: 130px;
+		height: 15px;
+	}
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ * GENERAL CLASSES
+ * * * * * * * * * * * * * * * * * * */
+/* CLEAR FIX */
+.cf:after	{ display: block; visibility: hidden; clear: both; height: 0; content: ""; }
+.cf			{ zoom: 1; }
+/* display */
+.mt5 {margin-top: 5px;}
+.mr10 {margin-right: 10px;}
+/* Font size */
+.fs30 {font-size: 30px;}
