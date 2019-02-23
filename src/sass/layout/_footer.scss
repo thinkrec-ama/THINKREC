@@ -1,0 +1,83 @@
+.ft-nav-wrap {
+  padding: 20px 0 30px;
+  border-top: 1px solid #bebebe;
+}
+
+.copyright-nav {
+  margin-top: 8px;
+}
+
+.ft-nav > li,
+.copyright-nav > li {
+  float: left;
+}
+.ft-nav > li + li,
+.copyright-nav > li + li {
+  margin-left: 10px;
+}
+
+.ft-contact {
+  width: 29px;
+  height: 29px;
+  background-position: 0 0;
+}
+.ft-contact:hover {
+  background-position: 0 -30px;
+}
+
+.ft-sundcloud {
+  width: 30px;
+  height: 29px;
+  background-position: -41px 0;
+}
+.ft-sundcloud:hover {
+  background-position: -41px -30px;
+}
+.ft-youtube {
+  width: 30px;
+  height: 29px;
+  background-position: -83px 0;
+}
+.ft-youtube:hover {
+  background-position: -83px -30px;
+}
+.ft-vimeo {
+  width: 30px;
+  height: 29px;
+  background-position: -125px 0;
+}
+.ft-vimeo:hover {
+  background-position: -125px -30px;
+}
+.ft-twitter {
+  width: 30px;
+  height: 29px;
+  background-position: -166px 0;
+}
+.ft-twitter:hover {
+  background-position: -166px -30px;
+}
+.ft-blog {
+  width: 30px;
+  height: 29px;
+  background-position: -208px 0;
+}
+.ft-blog:hover {
+  background-position: -208px -30px;
+}
+.ico-copyright {
+  width: 85px;
+  height: 10px;
+  background-position: -265px 0;
+}
+.ico-copyright:hover {
+  background-position: -265px -10px;
+}
+.ico-up-link {
+  width: 57px;
+  height: 10px;
+  background-position: -390px 0;
+}
+.ico-up-link:hover {
+  background-position: -390px -10px;
+}

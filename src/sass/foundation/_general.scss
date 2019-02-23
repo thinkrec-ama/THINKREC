@@ -1,0 +1,38 @@
+/* FLOAT */
+.fl			{ float: left; }
+.fr			{ float: right; }
+.cb			{ clear: both; }
+/* CLEAR FIX */
+.cf:after	{ display: block; visibility: hidden; clear: both; height: 0; content: ""; }
+.cf			{ zoom: 1; }
+/* VERTICAL-ALIGN */
+.vat		{ vertical-align: top; }
+.vam		{ vertical-align: middle; }
+.vab		{ vertical-align: bottom; }
+/* TEXT-ALIGN */
+.tal		{ text-align: left; }
+.tac		{ text-align: center; }
+.tar		{ text-align: right; }
+/* DISPLAY */
+.dib4b		{ display: inline-block; zoom: 1; *display: inline; }
+/* POSITION */
+.pr			{ position: relative; zoom: 1; }
+.pa			{ position: absolute; }
+/* FONT SIZE */
+.fs10 		{ font-size: 10px; }
+/* MARGIN TOP */
+.mt5  		{ margin-top: 5px; }
+.mt10 		{ margin-top: 10px; }
+.mt20 		{ margin-top: 20px; }
+.mt30 		{ margin-top: 30px; }
+.mt50 		{ margin-top: 50px; }
+.mt90 		{ margin-top: 90px; }
+/* MARGIN RIGHT */
+.mr5 { margin-right: 5px; }
+/* OFF LEFT */
+.ol			{ overflow: hidden; text-indent: -9999px; }
+/* COLOR */
+.red { margin-right: 5px; color: #c0392b; font-weight: bold; font-size: 10px; }
+.red2 { color: #C0392B; }
+/* FONT-WEIGHT */
+.b			{ font-weight: bold; }
