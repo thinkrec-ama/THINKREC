@@ -1,8 +1,16 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
 const ejs = require('gulp-ejs');
+const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+
+gulp.task('ejs', done => {
+    gulp.src(['src/ejs/**/*.ejs', '!' + 'src/ejs/include/_*.ejs'])
+        .pipe(ejs())
+        .pipe(rename({extname: '.html'}))
+        .pipe(gulp.dest('dist/'));
+    done()
+});
 
 gulp.task('sass', done => {
     gulp.src('src/sass/**/*.scss')
@@ -16,21 +24,14 @@ gulp.task('sass', done => {
     done()
 });
 
-gulp.task('ejs', done => {
-    gulp.src(['src/ejs/**/*.ejs', '!' + 'src/ejs/include/_*.ejs'])
-        .pipe(ejs())
-        .pipe(rename({extname: '.html'}))
-        .pipe(gulp.dest('dist/'));
-    done()
+gulp.task('watch', () => {
+    gulp.watch('src/ejs/**/*.ejs', gulp.series('ejs','log'));
+    gulp.watch('src/sass/**/*.scss', gulp.series('sass','log'));
 });
 
 gulp.task('log', done => {
     console.log("DONE");
     done()
-});
-
-gulp.task('watch', () => {
-    gulp.watch('src/sass/**/*.scss', gulp.series('sass','log'));
 });
 
 gulp.task("default",
