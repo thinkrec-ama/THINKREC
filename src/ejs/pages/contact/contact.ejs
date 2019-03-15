@@ -20,59 +20,13 @@
 <!-- header_from -->
 <%- include('../../include/_header') %>
 <!-- header_to -->
-<div class="wrapper">
-    <ol class="breadcrumb-list cf">
-        <li><a href="/index.html">HOME</a>&nbsp;&nbsp;&#62;&nbsp;&nbsp;</li>
-        <li class="current">CONTACT</li>
-    </ol>
-    <div class="content cf">
-        <div class="contact-content">
-            <h2>CONTACT</h2>
-            <p class="mt10 link-style"><a href="mailto:info@thinkrec.com">info@thinkrec.com</a></p>
-        </div>
-        <div class="right-content">
-            <!-- event-info_from -->
-            <%- include('../../include/_event-info') %>
-            <!-- event-info_to -->
-            <!-- news-info_from -->
-            <%- include('../../include/_news-info') %>
-            <!-- news-info_to -->
-            <!-- banner_from -->
-            <%- include('../../include/_banner') %>
-            <!-- banner_to -->
-        </div>
-    </div>
-    <!-- footer_from -->
-    <%- include('../../include/_footer') %>
-    <!-- footer_to -->
-</div>
-<script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript">
-    var menuHeight = $(".jscScrollHeader").height();
-    var startPos = 0;
-    $(window).scroll(function(){
-        var currentPos = $(this).scrollTop();
-        if (currentPos > startPos) {
-            if($(window).scrollTop() >= 200) {
-                $(".jscScrollHeader").css("top", "-" + menuHeight + "px");
-            }
-        } else {
-            $(".jscScrollHeader").css("top", 0 + "px");
-        }
-        startPos = currentPos;
-    });
-</script>
-<script type="text/javascript">
-    $(function(){
-        $('a[href^=#]').click(function() {
-            var speed = 400;
-            var href= $(this).attr("href");
-            var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top;
-            $('body,html').animate({scrollTop:position}, speed, 'swing');
-            return false;
-        });
-    });
-</script>
+    <main>
+        <section>
+
+        </section>
+    </main>
+<!-- footer_from -->
+<%- include('../../include/_footer') %>
+<!-- footer_to -->
 </body>
 </html>

@@ -1,306 +1,126 @@
-@charset "utf-8";
-
-/* * * * * * * * * * * * * * * * * * *
- * FONT STYLES
- * * * * * * * * * * * * * * * * * * */
+// ==========================================================================
+// Base Style
+// ==========================================================================
 
 body {
-  background: #FFF;
-  color: #140f10;
-  font-size: 12px;
-  font-family: "Hiragino Kaku Gothic Pro","HiraKakuPro-W3",Helvetica,Arial,sans-serif,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック";
-  line-height: 1.5;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-size: 100%;
+	background: #f3f4f5;
+	color: #2f353a;
+	font-size: 14px;
+	font-family: "Hiragino Kaku Gothic Pro","HiraKakuPro-W3",Helvetica,Arial,sans-serif,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック";
+	line-height: 1.5;
 }
 
-/* * * * * * * * * * * * * * * * * * *
- * ANCHOR STYLES
- * * * * * * * * * * * * * * * * * * */
+// ==========================================================================
+// Mixin
+// ==========================================================================
 
-a:link,
-a:visited { color: #140f10; text-decoration: none; }
-a:hover,
-a:active,
-a.current { color: #140f10; text-decoration: none; }
+// -----------------------------------------------------------------
+// breakpoint
+// -----------------------------------------------------------------
 
-/* * * * * * * * * * * * * * * * * * *
- * SPRITES
- * * * * * * * * * * * * * * * * * * */
+$pc: 1025px;
+$tab: 680px;
+$sp: 480px;
 
-.s {
-  display: block;
-  background: url("/images/common/s.png");
+@mixin pc {
+	@media screen and (min-width: ($pc)) {
+		@content;
+	}
+}
+@mixin tab {
+	@media screen and (min-width: ($tab)) and (max-width: ($pc)) {
+		@content;
+	}
+}
+@mixin sp {
+	@media screen and (min-width: ($sp)) {
+		@content;
+	}
 }
 
-.ft-ico-s {
-  display: block;
-  background: url("/images/common/ft_ico.png") no-repeat;
-}
+// ==========================================================================
+// Colors
+// ==========================================================================
 
-.bnr-ico-s {
-  display: block;
-  background: url("/images/banner/bnr_47_ture_s.png") no-repeat;
-}
+// -----------------------------------------------------------------
+// Theme colors
+// -----------------------------------------------------------------
 
-/* * * * * * * * * * * * * * * * * * *
- * STRUCTURE & SKIN STYLES
- * * * * * * * * * * * * * * * * * * */
+// Brand Primary Color
+$tnk-primary-color: #20a8d8;
 
-.wrapper {
-  width: 980px;
-  margin: 0 auto;
-  padding: 90px 0 10px;
-}
+// Brand Secondary Color
+$tnk-secondary-color: #73818f;
 
-/* * * * * * * * * * * * * * * * * * *
- * CONTENT
- * * * * * * * * * * * * * * * * * * */
+// Brand Success Color
+$tnk-success-color: #4dbd74;
 
-.content {
-  margin: 0 0 40px;
-}
-@-webkit-keyframes 'fadeIn' {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
-}
-.content {
-  -webkit-animation-name: 'fadeIn';
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: 1;
-}
+// Brand Danger Color
+$tnk-danger-color: #f86c6b;
 
-.h2-headline {
-  font-size: 11px;
-  font-weight: bold;
-}
+// Brand Warning Color
+$tnk-warning-color: #ffc107;
 
-.disc-content,
-.event-content,
-.contact-content,
-.file-not-found-content {
-  float: left;
-  margin-right: 20px;
-  width: 760px;
-}
+// Brand Info Color
+$tnk-info-color: #63c2de;
 
-/* --- LEFT CONTENT --- */
+// Brand Light Color
+$tnk-light-color: #f3f4f5;
 
-.left-content {
-  float: left;
-  margin-right: 20px;
-  width: 240px;
-}
+// Brand Dark Color
+$tnk-dark-color: #2f353a;
 
-.border-bottom {
-  padding-bottom: 3px;
-  border-bottom: 1px solid #140f10;
-}
+// -----------------------------------------------------------------
+// Grays
+// -----------------------------------------------------------------
 
-.release-list {
-  margin-top: 15px;
-}
+// Grays 100 Color
+$tnk-gray-100: #f3f4f5;
 
-.release-list > li {
-  float: left;
-  width: 120px;
-}
+// Grays 200 Color
+$tnk-gray-200: #e4e7ea;
 
-.release-list > li > a {
-  display: block;
-  padding: 5px;
-  min-height: 140px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  transition: background-color 0.3s;
-}
+// Grays 300 Color
+$tnk-gray-300: #c8ced3;
 
-.release-list > li > a:hover {
-  background-color: #ffa200;
-}
+// Grays 400 Color
+$tnk-gray-400: #acb4bc;
 
-.disc-info > dd {
-  font-size: 10px;
-  margin-top: 5px;
-  -ms-word-break: break-all;
-  word-break: break-all;
-}
+// Grays 500 Color
+$tnk-gray-500: #8f9ba6;
 
-/* --- CENTER CONTENT --- */
+// Grays 600 Color
+$tnk-gray-600: #73818f;
 
-.center-content {
-  float: left;
-  margin-right: 20px;
-  width: 500px;
-}
+// Grays 700 Color
+$tnk-gray-700: #3a4149;
 
-.article-box {
-  margin-top: 20px;
-  -ms-word-break: break-all;
-  word-break: break-all;
-}
+// Grays 800 Color
+$tnk-gray-800: #2f353a;
 
-.article-box:first-child {
-  margin-top: 0;
-}
+// Grays 900 Color
+$tnk-gray-900: #23282c;
 
-.article-box-inner {
-  display: block;
-  padding: 5px 10px 15px;
-  transition: background-color 0.3s;
-}
+// ==========================================================================
+// Size
+// ==========================================================================
 
-.article-box-inner:hover {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #ffa200;
-}
+// -----------------------------------------------------------------
+// font-size
+// -----------------------------------------------------------------
 
-.article-header {
-  padding: 5px 0 3px;
-  padding-bottom: 3px;
-  border-bottom: 1px dotted #140f10;
-}
+$font-size-mini: 10px;
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-large: 16px;
+$font-size-largest: 18px;
 
-.article-header > h1 {
-  font-weight: bold;
-  font-size: 14px;
-}
+// ==========================================================================
+// Border radius
+// ==========================================================================
 
-.article-update {
-  font-size: 10px;
-  padding: 6px 0;
-  text-align: right;
-}
+// -----------------------------------------------------------------
+// border-radius
+// -----------------------------------------------------------------
 
-.end {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background: #ecf0f1;
-  color: #bdc3c7;
-}
-
-.end .current {
-  color: #95a5a6 !important;
-}
-
-.noLink {
-  width: 480px;
-  margin: 0 auto;
-}
-
-/* --- RIGHT CONTENT --- */
-
-.right-content {
-  float: left;
-  width: 195px;
-}
-
-.news-list-wrap {
-  margin: 30px 0;
-}
-
-.event-info-list,
-.news-list {
-  overflow-x: hidden;
-  height: 200px;
-  -ms-overflow-x: hidden;
-}
-
-.event-info-list > li,
-.news-list > li {
-  border-bottom: 1px dotted #7f8c8d;
-}
-
-.event-info-list > li > a,
-.news-list > li > a {
-  display: block;
-  padding: 3px;
-}
-
-.event-info-list > li > a:hover,
-.news-list > li > a:hover {
-  background: #ffa200;
-}
-
-.event-info-list > li.close > a:hover,
-.news-list > li.close > a:hover {
-  background: #bdc3c7;
-  cursor: default;
-}
-
-.event-info-side-column > dd,
-.news-info > dd {
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.close {
-  background: #ecf0f1;
-}
-
-.icon-new {
-  font-size: 10px;
-  color: #FFF;
-  line-height: 1;
-  background: #E74C3C;
-  margin-right: 5px;
-  padding: 1px 3px 0;
-}
-
-/* --- PAGER --- */
-
-.pager-wrap {
-  padding: 10px 0;
-  border-top: 1px dotted #7f8c8d;
-}
-
-.prev-arrow {
-  margin-left: 5px;
-  width: 10px;
-  height: 16px;
-  background-position: -30px -42px;
-}
-
-.next-arrow {
-  margin-right: 5px;
-  width: 10px;
-  height: 16px;
-  background-position: -18px -42px;
-}
-
-/* * * * * * * * * * * * * * * * * * *
- * SOCIAL
- * * * * * * * * * * * * * * * * * * */
-
-.social-btn-wrap {
-  margin-top: 20px;
-}
-
-.social-btn-wrap > li {
-  float: left;
-}
-
-/* * * * * * * * * * * * * * * * * * *
- * BANNER
- * * * * * * * * * * * * * * * * * * */
-
-.banner-wrap {
-  /*margin-top: 80px;*/
-  margin: 20px 0;
-}
-.banner-list > li {
-  text-align: center;
-}
-.banner-list img:hover {
-  opacity: 0.8;
-}
+$border-radius-normal: 5px;

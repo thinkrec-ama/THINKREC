@@ -13,8 +13,6 @@
 
 @import "./layout/_header.scss";
 @import "./layout/_footer.scss";
-@import "./layout/_article.scss";
-@import "./layout/_disc.scss";
 
 // ==========================================================================
 // Object
@@ -29,13 +27,9 @@
 // Project
 // -----------------------------------------------------------------
 
-@import "./object/project/_contact.scss";
-@import "./object/project/_event.scss";
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
 
 @import "./object/utility/_general.scss";
-@import "./object/utility/_bxslider.scss";
-@import "./object/utility/_fancybox.scss";
