@@ -77,5 +77,8 @@
 
 /*上書き*/
 .event-article-box {
-  padding: 10px;
+  padding: 15px;
+}
+.event-article-box + .event-article-box {
+  margin-top: 20px;
 }
