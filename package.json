@@ -24,6 +24,6 @@
     "gulp-ejs": "^3.3.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp.spritesmith": "^6.9.0"
+    "gulp.spritesmith": "^6.10.0"
   }
 }
